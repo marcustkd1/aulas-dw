@@ -1,0 +1,8 @@
+h1, p{
+	text-align: center;
+	color: yellow;
+}
+p{
+		text-align: justify;
+		color: blue;
+	}

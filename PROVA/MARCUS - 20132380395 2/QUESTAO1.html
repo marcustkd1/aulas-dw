@@ -1,0 +1,108 @@
+<!-- Marcus Paulo Pereira Lima de Carvalho
+Matricula: 20132380395 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QUESTAO 1</title>
+
+	<style>
+
+		.icone {
+		padding-right: 30px;
+    	text-decoration: none;
+    	background: url(ico.png) no-repeat right;
+    	background-size: 20px;
+
+		}
+
+		.col {
+			width: 180px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.UP {
+			background-color: #C7F464;
+			text-align: center;
+		}
+
+		.DOWN {
+			background-color: red;
+			text-align: center;
+		}
+		
+		table {
+
+			border-style: solid;
+			border-color: black;
+			border-collapse: collapse;
+			background-color: #E0E4CC;
+		}
+
+		thead {
+			border-bottom-style: solid;
+			border-bottom-color: black;
+			background-color: #547980;
+		}
+
+		#dif {
+			background-color: #E5FCC2;
+		}
+
+		.cursive {
+			font-family: "times new roman", serif;
+		}
+
+		thead {
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+
+
+
+
+<body>
+<h2>Websites (HTTP)</h2>
+
+
+	<table cellpadding="4">
+		<thead>
+			<td>Host</td>
+			<td>Status</td>
+			<td>Services</td>
+		</thead>
+		<tr id="dif">
+			<td class="col">localhost</td>
+			<td class="UP" class="center">UP</td>
+			<td class="center" class="p"> <a href="localhost">HTTP </a></td>
+		</tr>
+		<tr>
+			<td class="serif"><a class="icone" href="www.secure.nagios.com"> secure.nagios.com </a></td>
+			<td class="DOWN" class="center">DOWN</td>
+			<td class="center"><a href="www.secure.nagios.com">HTTP</a></td>
+		</tr>
+		<tr id="dif">
+			<td class="serif"> <a class="icone" href="www.vs1.nagios.org">vs1.nagios.org</a></td>
+			<td class="UP" class="center">UP</td>
+			<td class="center"> <a href="www.vs1.nagios.org">HTTP</a></td>
+		</tr>
+		<tr>
+			<td class="serif"><a class="icone" href="www.chaoticmoon.com">www.chaoticmoon.com</a></td>
+			<td class="UP" class="center">UP</td>
+			<td class="center"> <a href="www.chaoticmoon.com">HTTP</a></td>
+		</tr>
+		<tr id="dif">
+			<td class="serif"><a class="icone" href="www.nagios.com">www.nagios.com</a></td>
+			<td class="DOWN" class="center">DOWN</td>
+			<td class="center"> <a href="www.nagios.com">HTTP</a></td>
+		</tr>
+	</table>
+
+</body>
+</html>

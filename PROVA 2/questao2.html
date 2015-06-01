@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QUESTAO 2</title>
+
+	<style>
+	legend {
+		background-color: #FFA500; width: 109%
+	}
+
+
+</style>
+</head>
+
+
+<body>
+
+<br><br><br><br><br>
+	<center>
+<div>
+	<table width="300px" border="0">
+		<tr>
+		
+		<td>
+				
+				<fieldset align="center">
+					<legend><h3> Gerador de Senha </h3></legend>
+					Tamanho: <input type="text" name="tam"><br><br>
+					Tipo: <select id="tipo" id="tipo">
+				<option value=""> Tipo da senha </option>
+				<optgroup>
+					<option value="NUMERIC" selected >NUMERIC </option>
+					<option value="MIXEDCASEALPHANUMERIC" selected >MIXED CASE ALPHANUMERIC </option>
+				</optgroup>
+			</select><br><br>
+			<button onclick="gerar()" id="buttongerar"> gerar senha</button> <br><br>
+			<div id="loading">
+		<img src="loading.gif" width="100" height="111">
+	</div>
+			
+			Resultado: <input type="text" id="resultado">
+			</fieldset>
+			
+		
+	</table>
+</div>
+
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+<script>
+$("#loading").hide();
+
+
+	function gerar(){
+$("#loading").show();
+		var lengthAPI = $("#tamanho").val();
+		var charsetAPI = $("#tipo").val();
+
+		var url = "https://fzoccara.p.mashape.com/1.0/get_password.json?charset="+charsetAPI+"&length="+lengthAPI+"&separator=hyphen&type=random"
+			
+
+$.ajaxSetup({
+		  headers : {   
+		    'X-Mashape-Key' : 'og1yBUTFFZmshoJQRzXTCu6juq0Pp1MSCiojsnRZNJ6mYEzz23'
+		  }
+		});
+
+
+	$.getJSON(url, function(json){
+			var senha = json.password;
+
+			document.querySelector("#resultado").value = senha;
+			$("#loading").hide();
+	});
+	
+	}
+
+</script>
+</center>
+
+</body>
+</html>
